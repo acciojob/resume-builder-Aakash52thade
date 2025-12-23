@@ -1,7 +1,15 @@
-// src/features/projectSlice.js
+// src/features/projectsSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = []; // ← Empty array — you got it!
+const initialState = [
+  // Pre-add one empty entry
+  {
+    id: Date.now(),
+    projectName: '',
+    techStack: '',
+    description: '',
+  }
+];
 
 const projectSlice = createSlice({
   name: 'projects',
@@ -25,7 +33,7 @@ const projectSlice = createSlice({
     },
 
     removeProject(state, action) {
-      const id = action.payload; // ← Just id — clean!
+      const id = action.payload;
       return state.filter((p) => p.id !== id);
     },
   },

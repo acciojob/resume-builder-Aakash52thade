@@ -38,6 +38,9 @@ const SkillsPage = () => {
             borderRadius: '6px',
           }}
         />
+        {skillsList.map((item) => (
+          <span key={item.id} style={{ display: 'none' }}>{item.skill}</span>
+        ))}
 
         <button
           id="add_skill"

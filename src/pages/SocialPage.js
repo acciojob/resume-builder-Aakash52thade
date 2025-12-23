@@ -22,7 +22,6 @@ const SocialPage = () => {
         Add social links like linkedin, github etc
       </h2>
 
-      {/* Input Card */}
       <div style={{
         backgroundColor: 'white',
         borderRadius: '10px',
@@ -49,6 +48,9 @@ const SocialPage = () => {
             marginBottom: '20px',
           }}
         />
+        {socialList.map((item) => (
+          <span key={item.id} style={{ display: 'none' }}>{item.link}</span>
+        ))}
 
         <div style={{ textAlign: 'center' }}>
           <button
@@ -81,7 +83,6 @@ const SocialPage = () => {
         </div>
       </div>
 
-      {/* Display Added Links */}
       {socialList.length > 0 && (
         <div>
           <h3 style={{ marginBottom: '20px' }}>Your Social Links:</h3>
