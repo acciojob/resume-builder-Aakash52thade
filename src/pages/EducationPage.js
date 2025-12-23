@@ -15,7 +15,7 @@ const EducationPage = () => {
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
       {/* Title */}
       <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#333' }}>
-        Add your Education Details
+       Add your Education Details
       </h2>
 
       {/* Add Education Button at Top - Required for Cypress */}
@@ -33,7 +33,7 @@ const EducationPage = () => {
             cursor: 'pointer',
           }}
         >
-          ADD EDUCATION
+         Add Education
         </button>
       </div>
 

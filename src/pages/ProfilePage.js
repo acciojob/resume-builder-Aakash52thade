@@ -71,7 +71,7 @@ const ProfilePage = () => {
           name="url"
           value={profile.url}
           onChange={handleChange}
-          placeholder="https://example.com/photo.jpg"
+          placeholder="Profile image URL"
           style={{ width: '100%', padding: '8px', marginTop: '5px' }}
         />
       </div>

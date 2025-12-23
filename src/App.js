@@ -30,7 +30,9 @@ const App = () => {
   }
   return (
     <div style={{ padding: '40px', fontFamily: 'Arial, sans-serif' }}>
-      <h1 style={{ textAlign: 'center' }}>Resume Builder</h1>
+     <h1 style={{ textAlign: 'center', color: 'white', backgroundColor: '#e91e63', padding: '20px', margin: '0' }}>
+         RESUME GENERATOR
+     </h1>
       <p style={{ textAlign: 'center' }}>Step {currentStep + 1} of 6</p>
 
       {renderCurrentPage()}

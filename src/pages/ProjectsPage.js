@@ -14,7 +14,7 @@ const ProjectsPage = () => {
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
       <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#333' }}>
-        Add your Project Details
+       Add your Mini Projects
       </h2>
 
       {/* Add Project Button - Required for Cypress */}
