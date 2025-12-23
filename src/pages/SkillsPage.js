@@ -5,20 +5,22 @@ import { addSkills, removeSkills } from '../features/skillsSlice';
 
 const SkillsPage = () => {
   const dispatch = useDispatch();
-  const skillsList = useSelector((state) => state.skills); // array of { id, skill }
+  const skillsList = useSelector((state) => state.skills);
 
-  const [inputValue, setInputValue] = useState(''); // local state for input
+  const [inputValue, setInputValue] = useState('');
 
   const handleAddSkill = () => {
     if (inputValue.trim()) {
       dispatch(addSkills(inputValue.trim()));
-      setInputValue(''); // clear input
+      setInputValue('');
     }
   };
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      <h2 style={{ textAlign: 'center', color: '#666' }}>Add your Skills</h2>
+      <h2 style={{ textAlign: 'center', color: '#333', marginBottom: '30px' }}>
+        Add your Skills
+      </h2>
 
       <div style={{ marginBottom: '40px' }}>
         <input
@@ -27,7 +29,7 @@ const SkillsPage = () => {
           placeholder="e.g., React, JavaScript, Python"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          onKeyPress={(e) => e.key === 'Enter' && handleAddSkill()} // optional: add on Enter
+          onKeyPress={(e) => e.key === 'Enter' && handleAddSkill()}
           style={{
             width: '70%',
             padding: '15px',
@@ -55,7 +57,6 @@ const SkillsPage = () => {
         </button>
       </div>
 
-      {/* Display added skills */}
       {skillsList.length > 0 && (
         <div>
           <h3>Your Skills:</h3>
@@ -74,6 +75,7 @@ const SkillsPage = () => {
               >
                 {item.skill}
                 <button
+                  id="delete_skill"
                   onClick={() => dispatch(removeSkills(item.id))}
                   style={{
                     marginLeft: '10px',

@@ -1,4 +1,4 @@
-// src/pages/EducationPage.js (Updated to match your reference UI)
+// src/pages/EducationPage.js
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -13,12 +13,10 @@ const EducationPage = () => {
 
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
-      {/* Title */}
       <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#333' }}>
-       Add your Education Details
+        Add your Education Details
       </h2>
 
-      {/* Add Education Button at Top - Required for Cypress */}
       <div style={{ textAlign: 'center', marginBottom: '30px' }}>
         <button
           id="add_education"
@@ -33,12 +31,11 @@ const EducationPage = () => {
             cursor: 'pointer',
           }}
         >
-         Add Education
+          Add Education
         </button>
       </div>
 
-      {/* Education Entries */}
-      {educationList.map((edu, index) => (
+      {educationList.map((edu) => (
         <div
           key={edu.id}
           style={{
@@ -49,7 +46,6 @@ const EducationPage = () => {
             marginBottom: '30px',
           }}
         >
-          {/* 2x2 Grid Layout */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             <div>
               <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
@@ -156,32 +152,27 @@ const EducationPage = () => {
             </div>
           </div>
 
-          {/* Buttons: DELETE and (optional) another ADD */}
           <div style={{ textAlign: 'center', marginTop: '30px' }}>
             <button
+              id="delete"
               onClick={() => dispatch(deleteEducation(edu.id))}
               style={{
                 padding: '10px 25px',
                 backgroundColor: '#f8f9fa',
                 border: '1px solid #ccc',
                 borderRadius: '6px',
-                marginRight: '15px',
                 cursor: 'pointer',
               }}
             >
               DELETE
             </button>
-
-            {/* Optional: Add another one here if you want ADD inside card */}
-            {/* <button style={{...blue style...}}>ADD EDUCATION</button> */}
           </div>
         </div>
       ))}
 
-      {/* Message if no education */}
       {educationList.length === 0 && (
         <p style={{ textAlign: 'center', color: '#888', fontStyle: 'italic' }}>
-          Click "ADD EDUCATION" to add your qualifications.
+          Click "Add Education" to add your qualifications.
         </p>
       )}
     </div>

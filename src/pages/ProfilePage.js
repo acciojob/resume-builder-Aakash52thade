@@ -14,65 +14,77 @@ const ProfilePage = () => {
 
   return (
     <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}>
-      <h2>Profile Details</h2>
+      <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#333' }}>
+        Add your profile details
+      </h2>
 
       <div style={{ marginBottom: '15px' }}>
-        <label>First Name</label>
+        <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
+          First Name *
+        </label>
         <input
           type="text"
           name="fname"
           value={profile.fname}
           onChange={handleChange}
           placeholder="Enter first name"
-          style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+          style={{ width: '100%', padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
         />
       </div>
 
       <div style={{ marginBottom: '15px' }}>
-        <label>Last Name</label>
+        <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
+          Last Name *
+        </label>
         <input
           type="text"
           name="lname"
           value={profile.lname}
           onChange={handleChange}
           placeholder="Enter last name"
-          style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+          style={{ width: '100%', padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
         />
       </div>
 
       <div style={{ marginBottom: '15px' }}>
-        <label>Phone</label>
+        <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
+          Phone *
+        </label>
         <input
           type="text"
           name="phone"
           value={profile.phone}
           onChange={handleChange}
           placeholder="Enter phone number"
-          style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+          style={{ width: '100%', padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
         />
       </div>
 
       <div style={{ marginBottom: '15px' }}>
-        <label>Address</label>
+        <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
+          Address *
+        </label>
         <textarea
           name="address"
           value={profile.address}
           onChange={handleChange}
           placeholder="Enter address"
           rows="3"
-          style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+          style={{ width: '100%', padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
         />
       </div>
 
       <div style={{ marginBottom: '15px' }}>
-        <label>Profile Image URL</label>
+        <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
+          Profile Image URL
+        </label>
         <input
           type="text"
           name="url"
           value={profile.url}
           onChange={handleChange}
-          placeholder="Profile image URL"
-          style={{ width: '100%', padding: '8px', marginTop: '5px' }}
+          placeholder="Enter profile image URL"
+          style={{ width: '100%', padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
         />
       </div>
 

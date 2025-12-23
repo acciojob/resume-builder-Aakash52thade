@@ -9,15 +9,14 @@ import {
 
 const ProjectsPage = () => {
   const dispatch = useDispatch();
-  const projectsList = useSelector((state) => state.projects); // array of projects
+  const projectsList = useSelector((state) => state.projects);
 
   return (
     <div style={{ maxWidth: '900px', margin: '0 auto', padding: '20px' }}>
       <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#333' }}>
-       Add your Mini Projects
+        Add your Mini Projects
       </h2>
 
-      {/* Add Project Button - Required for Cypress */}
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         <button
           id="add_project"
@@ -36,7 +35,6 @@ const ProjectsPage = () => {
         </button>
       </div>
 
-      {/* List of Projects */}
       {projectsList.length === 0 ? (
         <p style={{ textAlign: 'center', color: '#888', fontStyle: 'italic' }}>
           No projects added yet. Click "ADD PROJECT" to start.
@@ -53,7 +51,6 @@ const ProjectsPage = () => {
               marginBottom: '30px',
             }}
           >
-            {/* Grid Layout - 1 column on mobile, 2 on larger */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px' }}>
               <div>
                 <label style={{ display: 'block', marginBottom: '8px', fontWeight: 'bold' }}>
@@ -141,9 +138,9 @@ const ProjectsPage = () => {
               </div>
             </div>
 
-            {/* Delete Button */}
             <div style={{ textAlign: 'center', marginTop: '30px' }}>
               <button
+                id="delete"
                 onClick={() => dispatch(removeProject(proj.id))}
                 style={{
                   padding: '10px 30px',
